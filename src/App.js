@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import MoleContainer from './Components/MoleContainer';
 
 function App() {
@@ -8,10 +9,7 @@ function App() {
     let hills = []
     for (let i = 0; i < 9; i++) {
       hills.push(
-        <MoleContainer
-        key={setScore={setScore}}
-        score={score}/>
-        )
+        <MoleContainer key={i} setScore={setScore} score={score}/>)
     }
     return (
       <div>
@@ -19,6 +17,7 @@ function App() {
       </div>
     )
   }
+  
   return (
     <div className="App">
       <h1>React-A-Mole!</h1>
